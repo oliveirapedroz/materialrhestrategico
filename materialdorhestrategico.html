@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Material do RH Estratégico</title>
+<meta name="description" content="O material que ajudou mais de 2.000 profissionais de RH a implantar setores estruturados, do zero." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --bg: #fbfbfd;
+  --bg-dark: #1d1d1f;
+  --text: #1d1d1f;
+  --text-muted: #6e6e73;
+  --text-light: #86868b;
+  --accent: #0071e3;
+  --accent-hover: #0077ED;
+  --border: #d2d2d7;
+  --surface: #ffffff;
+  --surface-elevated: #f5f5f7;
+  --display: 'Instrument Serif', 'Times New Roman', serif;
+  --body: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  font-weight: 400;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: rgba(251, 251, 253, 0.8);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-left {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+.nav-brand {
+  font-family: var(--display);
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  font-style: italic;
+}
+.nav-author {
+  font-size: 12px;
+  color: var(--text-light);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+}
+.nav-author:hover {
+  color: var(--text);
+  border-bottom-color: var(--text-light);
+}
+@media (max-width: 600px) {
+  .nav-author { display: none; }
+}
+.nav-cta {
+  font-size: 13px;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 980px;
+  background: var(--text);
+  color: var(--bg);
+  transition: opacity 0.2s ease;
+  font-weight: 500;
+}
+.nav-cta:hover { opacity: 0.85; }
+
+.hero {
+  padding: 120px 24px 100px;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.hero-eyebrow {
+  font-size: 14px;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.1s forwards;
+}
+.hero-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 8vw, 96px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  margin-bottom: 24px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--text-muted);
+}
+.hero-subtitle {
+  font-size: clamp(19px, 2vw, 24px);
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 56px;
+  font-weight: 400;
+  letter-spacing: -0.012em;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.55s forwards;
+}
+.stat-num {
+  font-family: var(--display);
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.opening {
+  padding: 140px 24px;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.opening-text {
+  font-family: var(--display);
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+.opening-text span { color: var(--text-muted); }
+
+.folder { padding: 120px 24px; }
+.folder.dark { background: var(--bg-dark); color: var(--bg); }
+.folder.elevated { background: var(--surface-elevated); }
+.folder-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.folder-inner.reverse { direction: rtl; }
+.folder-inner.reverse > * { direction: ltr; }
+
+.folder-meta {
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.folder.dark .folder-meta { color: #5ac8fa; }
+
+.folder-title {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 68px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.folder-title em { font-style: italic; color: var(--text-muted); }
+.folder.dark .folder-title em { color: rgba(255,255,255,0.5); }
+
+.folder-desc {
+  font-size: 19px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+.folder.dark .folder-desc { color: rgba(255,255,255,0.7); }
+
+.folder-list { list-style: none; counter-reset: item; }
+.folder-list li {
+  font-size: 15px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  gap: 14px;
+  letter-spacing: -0.01em;
+}
+.folder.dark .folder-list li { border-top-color: rgba(255,255,255,0.12); }
+.folder-list li:last-child { border-bottom: 1px solid var(--border); }
+.folder.dark .folder-list li:last-child { border-bottom-color: rgba(255,255,255,0.12); }
+.folder-list li::before {
+  content: counter(item, decimal-leading-zero);
+  counter-increment: item;
+  font-family: var(--display);
+  font-style: italic;
+  color: var(--text-light);
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
+.folder-visual {
+  aspect-ratio: 1 / 1;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.folder.dark .folder-visual { background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%); }
+.folder-visual-num {
+  font-family: var(--display);
+  font-size: clamp(120px, 16vw, 220px);
+  line-height: 1;
+  color: rgba(0,0,0,0.08);
+  font-style: italic;
+  font-weight: 400;
+}
+.folder.dark .folder-visual-num { color: rgba(255,255,255,0.08); }
+
+@media (max-width: 900px) {
+  .folder-inner { grid-template-columns: 1fr; gap: 48px; }
+  .folder-inner.reverse { direction: ltr; }
+  .folder-visual { aspect-ratio: 4 / 3; }
+}
+
+.bonus { padding: 120px 24px; background: var(--surface-elevated); }
+.bonus-header { max-width: 880px; margin: 0 auto 80px; text-align: center; }
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.bonus-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bonus-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.06); }
+.bonus-card-num {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 16px;
+  letter-spacing: 0.02em;
+}
+.bonus-card-title {
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+@media (max-width: 768px) { .bonus-grid { grid-template-columns: 1fr; } }
+
+.access { padding: 120px 24px; text-align: center; }
+
+.overview { padding: 120px 24px; background: var(--surface-elevated); }
+.overview-inner { max-width: 1200px; margin: 0 auto; }
+.overview-header { text-align: center; max-width: 720px; margin: 0 auto 80px; }
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.overview-card {
+  background: var(--surface);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s ease;
+}
+.overview-card:hover { background: #fafafa; }
+.overview-num {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 36px;
+  line-height: 1;
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.overview-title {
+  font-family: var(--display);
+  font-size: 26px;
+  line-height: 1.15;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+.overview-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+@media (max-width: 1024px) { .overview-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .overview-grid { grid-template-columns: 1fr; } }
+.access-inner { max-width: 720px; margin: 0 auto; }
+.access-mock {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px;
+  margin-top: 56px;
+  text-align: left;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.06);
+}
+.access-mock-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--surface-elevated);
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+.access-mock-row:last-child { border-bottom: none; }
+.access-mock-icon {
+  width: 22px;
+  height: 18px;
+  background: var(--bg-dark);
+  border-radius: 3px;
+  flex-shrink: 0;
+  position: relative;
+}
+.access-mock-icon::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 9px;
+  height: 4px;
+  background: var(--bg-dark);
+  border-radius: 2px 2px 0 0;
+}
+
+.pricing { background: var(--bg); padding: 120px 24px; }
+.pricing-header { text-align: center; max-width: 720px; margin: 0 auto 72px; }
+.section-title {
+  font-family: var(--display);
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.section-title em { font-style: italic; color: var(--text-muted); }
+.section-subtitle {
+  font-size: 19px;
+  color: var(--text-muted);
+  max-width: 640px;
+  margin: 0 auto;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: 40px 32px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+.card.featured { background: var(--bg-dark); color: var(--bg); border-color: var(--bg-dark); }
+.card-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent);
+  color: white;
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 980px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.card-name { font-size: 14px; letter-spacing: 0.02em; color: var(--text-muted); margin-bottom: 12px; font-weight: 500; }
+.card.featured .card-name { color: rgba(255,255,255,0.7); }
+.card-title {
+  font-family: var(--display);
+  font-size: 32px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.card-price { font-family: var(--display); font-size: 56px; line-height: 1; margin-bottom: 4px; font-weight: 400; }
+.card-price-suffix { font-size: 14px; color: var(--text-muted); margin-bottom: 28px; }
+.card.featured .card-price-suffix { color: rgba(255,255,255,0.6); }
+.card-features { list-style: none; margin-bottom: 32px; flex: 1; }
+.card-features li {
+  font-size: 15px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.card.featured .card-features li { border-top-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.92); }
+.card-features li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--text);
+  margin-top: 9px;
+  flex-shrink: 0;
+}
+.card.featured .card-features li::before { background: white; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 980px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-hover); transform: scale(1.02); }
+.btn-light { background: var(--bg); color: var(--bg-dark); }
+.btn-light:hover { background: white; transform: scale(1.02); }
+.btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-outline:hover { background: var(--text); color: var(--bg); border-color: var(--text); }
+
+@media (max-width: 900px) { .pricing-grid { grid-template-columns: 1fr; max-width: 480px; } }
+
+.proof {
+  background: var(--bg-dark);
+  color: var(--bg);
+  text-align: center;
+  padding: 140px 24px;
+}
+.proof-quote {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.3;
+  font-style: italic;
+  max-width: 920px;
+  margin: 0 auto 32px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.proof-quote + .proof-quote { margin-top: 0; }
+.proof-quote:last-of-type { margin-bottom: 40px; }
+.proof-author { font-size: 14px; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; text-transform: uppercase; }
+.proof-link {
+  display: inline-block;
+  margin-top: 48px;
+  color: var(--bg);
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 4px;
+  transition: border-color 0.2s ease;
+}
+.proof-link:hover { border-bottom-color: var(--bg); }
+
+.cta-final { text-align: center; padding: 140px 24px; }
+.cta-final-title {
+  font-family: var(--display);
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+.cta-final-title em { font-style: italic; color: var(--text-muted); }
+.cta-final-sub { font-size: 21px; color: var(--text-muted); max-width: 560px; margin: 0 auto 40px; }
+
+footer {
+  padding: 40px 24px;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 12px;
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--text-light); text-decoration: none; }
+footer a:hover { color: var(--text); }
+
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <div class="nav-brand">Material do RH Estratégico</div>
+      <a href="https://linkedin.com/in/pedro-oliveira-rh" target="_blank" rel="noopener" class="nav-author">por Pedro Oliveira</a>
+    </div>
+    <a href="#planos" class="nav-cta">Adquirir</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">Material do RH Estratégico</div>
+  <h1 class="hero-title">O pontapé inicial<br/>do seu <em>RH Estratégico.</em></h1>
+  <p class="hero-subtitle">Mais de 100 documentos, planilhas, templates e fluxos cobrindo cada etapa do ciclo do colaborador. Da admissão ao desligamento.</p>
+  <div class="hero-stats">
+    <div>
+      <div class="stat-num">+2.000</div>
+      <div class="stat-label">Profissionais de RH adquiriram</div>
+    </div>
+    <div>
+      <div class="stat-num">+30</div>
+      <div class="stat-label">Implantações feitas com o material</div>
+    </div>
+  </div>
+</section>
+
+<section class="opening reveal">
+  <p class="opening-text">Toda implantação de RH começa com a mesma pergunta. <span>Por onde eu começo?</span> Esse material é a resposta.</p>
+</section>
+
+<section class="overview reveal">
+  <div class="overview-inner">
+    <div class="overview-header">
+      <h2 class="section-title">As 8 pastas. <em>Em uma página.</em></h2>
+      <p class="section-subtitle">Cada pasta cobre um pilar do ciclo do colaborador. Tudo numerado, organizado e pronto para baixar.</p>
+    </div>
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="overview-num">01</div>
+        <h3 class="overview-title">Política de RH</h3>
+        <p class="overview-desc">A fundação. Política completa, manual de conduta e dicionário de conceitos-chave para reger todo o setor.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">02</div>
+        <h3 class="overview-title">Recrutamento e Seleção</h3>
+        <p class="overview-desc">Processo inteiro de R&S mapeado. Entrevista estruturada, perguntas por competências, parecer ao gestor, DISC e controle de vagas.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">03</div>
+        <h3 class="overview-title">Onboarding e Av. Experiência</h3>
+        <p class="overview-desc">Apresentação editável, formulários e templates para acolher, integrar e avaliar nos primeiros 90 dias.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">04</div>
+        <h3 class="overview-title">Gestão de Desempenho</h3>
+        <p class="overview-desc">Descrição de cargos, modelo de avaliação de desempenho e PDI prontos para o ciclo de performance.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">05</div>
+        <h3 class="overview-title">People Analytics</h3>
+        <p class="overview-desc">Indicadores de R&S e absenteísmo com gráficos prontos, mais o passo a passo para montar dashboard no Excel.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">06</div>
+        <h3 class="overview-title">Offboarding</h3>
+        <p class="overview-desc">Entrevista de desligamento, fluxo do processo e check-list para saídas conduzidas com método.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">07</div>
+        <h3 class="overview-title">Cultura e Clima</h3>
+        <p class="overview-desc">Pesquisa de clima do questionário ao plano de ação, mais o canvas para desenhar a cultura desejada.</p>
+      </div>
+      <div class="overview-card">
+        <div class="overview-num">08</div>
+        <h3 class="overview-title">Política de Promoções</h3>
+        <p class="overview-desc">Manual da política, templates de líder e RH e teste de fit cultural situacional para promover por critério.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="access reveal">
+  <div class="access-inner">
+    <h2 class="section-title">Veja como você vai <em>acessar.</em></h2>
+    <p class="section-subtitle">Tudo organizado em pastas numeradas no Google Drive. Acesso vitalício, sem login, sem plataforma.</p>
+    <div class="access-mock">
+      <div class="access-mock-row"><div class="access-mock-icon"></div>01. Política de RH</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>02. Recrutamento e Seleção</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>03. Onboarding e Av. Experiência</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>04. Gestão de Desempenho</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>05. People Analytics</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>06. Offboarding</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>07. Cultura e Clima</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>08. Política de Promoções</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>Bônus (Materiais Diversos)</div>
+      <div class="access-mock-row"><div class="access-mock-icon"></div>Como ser Estratégico?</div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing reveal" id="planos">
+  <div class="pricing-header">
+    <h2 class="section-title">Escolha o seu.</h2>
+    <p class="section-subtitle">Pagamento via Pix ou cartão de crédito. Após escolher, você fala direto comigo no WhatsApp.</p>
+  </div>
+  <div class="pricing-grid">
+
+    <div class="card">
+      <div class="card-name">Playbook</div>
+      <h3 class="card-title">LinkedIn para profissionais de RH</h3>
+      <div class="card-price">R$ 9,90</div>
+      <div class="card-price-suffix">pagamento único</div>
+      <ul class="card-features">
+        <li>Como montar seu perfil do zero</li>
+        <li>Estrutura para gerar autoridade</li>
+        <li>Templates de seções e bio</li>
+      </ul>
+      <a href="https://wa.me/5585996803397?text=Ol%C3%A1%20Pedro%2C%20tenho%20interesse%20no%20Playbook%20do%20LinkedIn%20por%20R%24%209%2C90" class="btn btn-outline" target="_blank" rel="noopener">Quero o Playbook</a>
+    </div>
+
+    <div class="card featured">
+      <div class="card-badge">Mais escolhido</div>
+      <div class="card-name">Combo</div>
+      <h3 class="card-title">Material completo do RH Estratégico</h3>
+      <div class="card-price">R$ 39</div>
+      <div class="card-price-suffix">pagamento único</div>
+      <ul class="card-features">
+        <li>Todas as 8 pastas estruturadas</li>
+        <li>Pasta bônus com ebooks e tabelas salariais</li>
+        <li>Acesso vitalício via Google Drive</li>
+        <li>Inclui o Playbook do LinkedIn</li>
+      </ul>
+      <a href="https://wa.me/5585996803397?text=Ol%C3%A1%20Pedro%2C%20quero%20o%20Combo%20Completo%20do%20Material%20do%20RH%20Estrat%C3%A9gico%20por%20R%24%2039" class="btn btn-light" target="_blank" rel="noopener">Quero o Combo</a>
+    </div>
+
+    <div class="card">
+      <div class="card-name">Conversa</div>
+      <h3 class="card-title">Tirar dúvidas antes de decidir</h3>
+      <div class="card-price">Grátis</div>
+      <div class="card-price-suffix">resposta direta no WhatsApp</div>
+      <ul class="card-features">
+        <li>Pergunte sobre conteúdo</li>
+        <li>Pergunte sobre formato de entrega</li>
+        <li>Pergunte sobre aplicação prática</li>
+      </ul>
+      <a href="https://wa.me/5585996803397?text=Ol%C3%A1%20Pedro%2C%20gostaria%20de%20tirar%20algumas%20d%C3%BAvidas%20sobre%20o%20Material%20do%20RH%20Estrat%C3%A9gico" class="btn btn-outline" target="_blank" rel="noopener">Tirar dúvidas</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="proof reveal">
+  <p class="proof-quote">Criei esse material para me ajudar nas rotinas de implantação do dia a dia. Era algo bem prático, feito para organizar melhor o trabalho e evitar retrabalho.</p>
+  <p class="proof-quote">Resolvi compartilhar no LinkedIn sem muita expectativa e, em 3 meses, o conteúdo já tinha alcançado mais de 2.000 pessoas. Isso acabou mostrando que esse tipo de ajuda faz sentido para mais gente, não só para mim.</p>
+  <div class="proof-author">— Pedro Oliveira</div>
+  <a href="https://linkedin.com/in/pedro-oliveira-rh" class="proof-link" target="_blank" rel="noopener">Ver provas sociais e feedbacks no LinkedIn</a>
+</section>
+
+<section class="cta-final reveal">
+  <h2 class="cta-final-title">Pronto para<br/><em>aplicar hoje.</em></h2>
+  <p class="cta-final-sub">Escolha sua opção e receba tudo direto no WhatsApp.</p>
+  <a href="#planos" class="btn btn-primary" style="width:auto; padding: 16px 40px; font-size: 17px;">Ver opções</a>
+</section>
+
+<footer>
+  <p>© 2026 Pedro Oliveira. Todos os direitos reservados. <a href="https://linkedin.com/in/pedro-oliveira-rh" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
